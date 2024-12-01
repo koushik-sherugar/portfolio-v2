@@ -1,64 +1,53 @@
 import React from "react";
 import { TechIconCloud } from "./TechIconCloud";
-import { Cover } from "./ui/Cover";
 
 const About = () => {
   return (
-    <div className="py-6 ">
-      <div className="container m-auto  px-6  md:px-12 xl:px-6">
-        <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-start lg:gap-12">
-          <div className="md:7/12 lg:w-6/12">
-            <h2 className="text-2xl font-bold md:text-4xl">
-              Hi, I'm Koushik Sherugar
-            </h2>
+    <div id="about" className="py-10 container m-auto  px-6  md:px-12 xl:px-6">
+      <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-start lg:gap-12">
+        <div className="md:7/12 lg:w-6/12">
+          <h2 className="text-2xl font-bold md:text-4xl">
+            Hi, I'm Koushik Sherugar
+          </h2>
 
-            <p className="mt-6 ">
-              A full-stack developer with a passion for building software that
-              is scalable, maintainable, and user-friendly. I have experience in
-              building web applications using modern technologies like React,
-              Next.js, Node.js, and Express.js. I am also proficient in mobile
-              app development using Flutter and Android. I am a quick learner
-              and a team player who is always eager to learn new technologies
-              and work on challenging projects. I am looking for opportunities
-              to work on exciting projects and contribute to the success of the
-              organization.
-            </p>
-            {/* Acheievements */}
-            <p className="mt-4 text-bold my-2">Acheievements</p>
-            <section className="flex gap-4 ">
-              {/* Projects done */}
-              <div className="flex flex-col gap-2 ">
-                <p className="text-xl">
-                  50 <span className="text-sm text-cyan-400">+</span>
-                </p>
-                <p>Projects done</p>
-              </div>
-              {/* Experience years */}
-              <div className="flex flex-col gap-2 ">
-                <p className="text-xl">
-                  5 <span className="text-sm text-cyan-400">+</span>
-                </p>
-                <p>Experience years</p>
-              </div>
-              {/* cleints served */}
-              <div className="flex flex-col gap-2 ">
-                <p className="text-xl">
-                  20 <span className="text-sm text-cyan-400">+</span>
-                </p>
-                <p>Clients served</p>
-              </div>
-            </section>
-          </div>
-          <div className="md:5/12 lg:w-5/12">
-            {/* <img
-              src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
-              alt="image"
-              loading="lazy"
-              width=""
-              height=""
-            /> */}
-            <TechIconCloud />
-          </div>
+          <p className="mt-6 ">
+            A full-stack developer with a passion for building software that is
+            scalable, maintainable, and user-friendly. I have experience in
+            building web applications using modern technologies like React,
+            Next.js, Node.js, and Express.js. I am also proficient in mobile app
+            development using Flutter and Android. I am a quick learner and a
+            team player who is always eager to learn new technologies and work
+            on challenging projects. I am looking for opportunities to work on
+            exciting projects and contribute to the success of the organization.
+          </p>
+          {/* Acheievements */}
+          <p className="mt-4 font-bold text-lg my-2">Acheievements</p>
+          <section className="flex gap-4 ">
+            {/* Projects done */}
+            <div className="flex flex-col gap-2 ">
+              <p className="text-xl">
+                50 <span className="text-sm text-cyan-400">+</span>
+              </p>
+              <p>Projects done</p>
+            </div>
+            {/* Experience years */}
+            <div className="flex flex-col gap-2 ">
+              <p className="text-xl">
+                4 <span className="text-sm text-cyan-400">+</span>
+              </p>
+              <p>Experience years</p>
+            </div>
+            {/* clients served */}
+            <div className="flex flex-col gap-2 ">
+              <p className="text-xl">
+                16 <span className="text-sm text-cyan-400">+</span>
+              </p>
+              <p>Clients served</p>
+            </div>
+          </section>
+        </div>
+        <div className="md:5/12 lg:w-5/12">
+          <TechIconCloud />
         </div>
       </div>
     </div>

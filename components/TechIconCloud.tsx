@@ -35,7 +35,7 @@ const slugs = [
 
 export function TechIconCloud() {
   return (
-    <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg   px-10 pb-10 pt-6 ">
+    <div className="relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg   px-10 ">
       <IconCloud iconSlugs={slugs} />
     </div>
   );

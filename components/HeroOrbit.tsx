@@ -1,5 +1,4 @@
 import { PropsWithChildren } from "react";
-import StarIcon from "../public/assets/icons/star.svg";
 import { twMerge } from "tailwind-merge";
 
 export const HeroOrbit = ({

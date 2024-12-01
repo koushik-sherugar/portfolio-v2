@@ -13,6 +13,9 @@ import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Landing from "@/components/Landing";
 import About from "@/components/About";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
+import CtaCard from "@/components/ui/CtaCard";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 
 const Home = () => {
   return (
@@ -22,12 +25,15 @@ const Home = () => {
         <Landing />
         <About />
         <ExperienceTimeline />
+        <Projects />
+        {/* <CtaCard /> */}
         {/* <Hero /> */}
-        <Grid />
-        <RecentProjects />
+        {/* <Grid />
+        <RecentProjects /> */}
         <Clients />
-        <Experience />
-        <Approach />
+        <Contact />
+        {/* <Experience /> */}
+        {/* <Approach /> */}
         <Footer />
       </div>
     </main>

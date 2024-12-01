@@ -1,15 +1,24 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import profileImg from "../public/assets/images/memoji-avatar-1.png";
 import grainImage from "../public/assets/images/grain.jpg";
 import StarIcon from "../public/assets/icons/star.svg";
 import SparkleIcon from "../public/assets/icons/sparkle.svg";
-
+import { IoMdArrowDown } from "react-icons/io";
 import { HeroOrbit } from "./HeroOrbit";
+import { AnimatedModal } from "./AnimatedModal";
+
 const Landing = () => {
+  const nextSectionRef = useRef<HTMLDivElement>(null);
+
+  function scrollToNextSection() {
+    if (nextSectionRef.current) {
+      nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip ">
-      {/* <div className="absolute inset-0 [mask-image: linear-gradient(to_bottom, transparent, black_10%, black_70%,transparent"> */}
       <div
         className="absolute inset-0"
         style={{
@@ -73,7 +82,7 @@ const Landing = () => {
           rotation={-72}
           shouldOrbit
           orbitDuration="48s"
-          shouldSpin
+          // shouldSpin
           spinDuration="6s"
         >
           <StarIcon className="size-28 text-emerald-300" />
@@ -92,30 +101,38 @@ const Landing = () => {
             <div className="bg-green-500 rounded-full size-2.5 relative ">
               <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
             </div>
-            <div className="text-sm font-semibold">
-              Available for new project
-            </div>
+            <div className="text-sm font-semibold">Let's build together</div>
           </div>
         </div>
         {/* texts */}
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl mt-8 md:text-5xl text-center tracking-wide">
-            text sample tiltle
+            Koushik Sherugar
           </h1>
           <p className="text-center mt-4 text-white/60 md:text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fugit
-            sapiente quae non nam ipsam ullam at eaque quaerat. Cumque.
+            An experienced developer with experience in for building awesome
+            applications for both startups and enterprises.
           </p>
           {/* buttons */}
           <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-            <button className="inline-flex items-center gap-2 border-2 border-white/15 px-6 h-12 rounded-xl">
-              <span className="font-semibold">Down</span>
-              <span>A</span>
+            <button className="cursor-pointer inline-flex items-center gap-2 border-2 border-white/15 px-6 h-12 rounded-xl">
+              <span className="font-semibold">Scroll Down</span>
+              <span>
+                <IoMdArrowDown />
+              </span>
             </button>
-            <button className="inline-flex items-center gap-2 border-2 bg-white border-white text-gray-900 px-6 h-12 rounded-xl">
-              <span>T</span>
-              <span className="font-semibold">Let's connect</span>
-            </button>
+            <AnimatedModal />
+            {/* <button
+              onClick={() => {
+                // openModal();
+                console.log("test");
+                setIsModalOpen(true);
+              }}
+              className="z-50 cursor-pointer inline-flex items-center gap-2 border-2 bg-white border-white text-gray-900 px-6 h-12 rounded-xl"
+            >
+              <span>👋</span>
+              <span className="font-semibold">Let's connecttt</span>
+            </button> */}
           </div>
         </div>
       </div>

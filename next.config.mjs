@@ -9,7 +9,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ["assets.aceternity.com"],
+    domains: ["assets.aceternity.com", "aceternity.com", "images.unsplash.com"],
   },
 };
 
