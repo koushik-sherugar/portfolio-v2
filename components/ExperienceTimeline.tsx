@@ -47,6 +47,7 @@ const ExperienceTimeline = () => {
   const data = [
     {
       title: "TAVANT",
+      role: "Senior Software Engineer",
       timeSpan: "2018 - 2020",
       content: (
         <div>
@@ -56,9 +57,6 @@ const ExperienceTimeline = () => {
           </p>
           <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
             ✅ Realtor.com :
-            {/* <span className="text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              Mexico's number 1 real estate company.Built a scalable search engine for real estate listings
-            </span> */}
           </div>
           {/* Bullet points */}
           <ul className="list-disc pl-4">
@@ -77,8 +75,10 @@ const ExperienceTimeline = () => {
       ),
     },
     {
-      title: "Early 2023",
+      title: "TRIKL",
+      role: " Software Engineer",
       timeSpan: "2020 - 2023",
+
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -123,7 +123,8 @@ const ExperienceTimeline = () => {
       ),
     },
     {
-      title: "Changelog",
+      title: "Codesyng",
+      role: "Software Engineer",
       timeSpan: "2023 - Present",
       content: (
         <div>

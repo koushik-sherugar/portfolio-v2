@@ -1,12 +1,24 @@
 import React, { useState } from "react";
+import Lottie from "react-lottie";
+import animationData from "@/data/confetti.json";
 
 const Contact = () => {
+  const [mailSent, setMailSent] = useState(false);
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  const defaultOptions = {
+    loop: mailSent,
+    autoplay: mailSent,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,11 +29,38 @@ const Contact = () => {
     setStep((prevStep) => prevStep + 1);
   };
 
+  const handleClear = () => {
+    setStep(1);
+    setFormData({ name: "", email: "", message: "" });
+  };
+
+  const handleSend = async () => {
+    try {
+      console.log("Sending form data", formData);
+      // handleClear();
+      setMailSent(true);
+
+      setTimeout(() => {
+        setMailSent(false);
+      }, 2000);
+      handleClear();
+    } catch (err) {
+      console.log(err);
+      setMailSent(false);
+    }
+  };
+  console.log("mailSent", mailSent);
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && formData.name) {
+      handleNext();
+    }
+  };
+
   return (
     <>
       <div
         style={{ display: "block" }}
-        className="no-scrollbar relative w-full overflow-hidden overflow-y-scroll border border-neutral-300 bg-white"
+        className="no-scrollbar relative w-full  overflow-hidden overflow-y-hidden border border-neutral-300 bg-white"
       >
         <section
           style={{
@@ -32,7 +71,7 @@ const Contact = () => {
           }}
           className="bg-violet-600 px-4 py-12"
         >
-          <div className="mx-auto h-96 w-full max-w-3xl cursor-text overflow-y-scroll rounded-lg bg-slate-950/70 font-mono shadow-xl backdrop-blur">
+          <div className="mx-auto h-96 w-full max-w-3xl cursor-text overflow-y-hidden rounded-lg bg-slate-950/70 font-mono shadow-xl backdrop-blur">
             <div className="sticky top-0 flex w-full items-center gap-1 bg-slate-900 p-3">
               <div className="h-3 w-3 rounded-full bg-red-500"></div>
               <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
@@ -40,6 +79,11 @@ const Contact = () => {
               <span className="absolute left-[50%] -translate-x-[50%] text-sm font-semibold text-slate-200">
                 koushiksherugar.contact@gmail.com
               </span>
+            </div>
+            <div className={`absolute`}>
+              {mailSent && (
+                <Lottie options={defaultOptions} height={200} width={400} />
+              )}
             </div>
             <div className="p-4 text-lg text-slate-100">
               {step === 1 && (
@@ -50,8 +94,9 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
+                    onKeyDown={handleKeyDown}
                     placeholder="Enter your name"
-                    className="mt-2 w-full rounded bg-slate-800 p-2 text-white"
+                    className="mt-2 w-full rounded bg-slate-800 p-2 text-white focus:border-0"
                   />
                   <button
                     onClick={handleNext}
@@ -70,6 +115,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    onKeyDown={handleKeyDown}
                     placeholder="Enter your email"
                     className="mt-2 w-full rounded bg-slate-800 p-2 text-white"
                   />
@@ -91,6 +137,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="Enter your message"
                     className="mt-2 w-full rounded bg-slate-800 p-2 text-white"
+                    onKeyDown={handleKeyDown}
                   />
                   <button
                     onClick={handleNext}
@@ -105,7 +152,8 @@ const Contact = () => {
                 <>
                   <p>Beautiful! Here's what we've got:</p>
                   <p>
-                    <span className="text-blue-300">Name:</span> {formData.name}
+                    <span className="text-blue-300 mt-2">Name:</span>{" "}
+                    {formData.name}
                   </p>
                   <p>
                     <span className="text-blue-300">Email:</span>{" "}
@@ -117,12 +165,19 @@ const Contact = () => {
                   </p>
                   <div className="mt-2 flex gap-2">
                     <button
-                      onClick={() => setStep(1)}
+                      onClick={() => {
+                        handleClear();
+                      }}
                       className="rounded bg-slate-100 px-3 py-1 text-base text-black transition-opacity hover:opacity-90"
                     >
                       Restart
                     </button>
-                    <button className="rounded bg-indigo-500 px-3 py-1 text-base text-white transition-opacity hover:opacity-90">
+                    <button
+                      onClick={() => {
+                        handleSend();
+                      }}
+                      className="rounded bg-indigo-500 px-3 py-1 text-base text-white transition-opacity hover:opacity-90"
+                    >
                       Send it!
                     </button>
                   </div>

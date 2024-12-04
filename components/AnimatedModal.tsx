@@ -47,10 +47,6 @@ export function AnimatedModal() {
       link: "https://github.com/koushik-sherugar",
       imgSrc: githubLogo,
     },
-    // {
-    //   link: "https://twitter.com/koushiksherugar",
-    //   imgSrc: twitterLogo,
-    // },
   ];
 
   return (

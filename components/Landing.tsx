@@ -7,6 +7,7 @@ import SparkleIcon from "../public/assets/icons/sparkle.svg";
 import { IoMdArrowDown } from "react-icons/io";
 import { HeroOrbit } from "./HeroOrbit";
 import { AnimatedModal } from "./AnimatedModal";
+import Link from "next/link";
 
 const Landing = () => {
   const nextSectionRef = useRef<HTMLDivElement>(null);
@@ -110,29 +111,20 @@ const Landing = () => {
             Koushik Sherugar
           </h1>
           <p className="text-center mt-4 text-white/60 md:text-lg">
-            An experienced developer with experience in for building awesome
-            applications for both startups and enterprises.
+            An experienced full stack developer with experience in building
+            awesome applications for both startups and enterprises.
           </p>
           {/* buttons */}
-          <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
+          <div className="flex flex-col md:flex-row justify-center items-center mt-6 gap-4">
             <button className="cursor-pointer inline-flex items-center gap-2 border-2 border-white/15 px-6 h-12 rounded-xl">
-              <span className="font-semibold">Scroll Down</span>
+              <Link href="#about" className="font-semibold">
+                Scroll Down
+              </Link>
               <span>
                 <IoMdArrowDown />
               </span>
             </button>
             <AnimatedModal />
-            {/* <button
-              onClick={() => {
-                // openModal();
-                console.log("test");
-                setIsModalOpen(true);
-              }}
-              className="z-50 cursor-pointer inline-flex items-center gap-2 border-2 bg-white border-white text-gray-900 px-6 h-12 rounded-xl"
-            >
-              <span>👋</span>
-              <span className="font-semibold">Let's connecttt</span>
-            </button> */}
           </div>
         </div>
       </div>

@@ -3,12 +3,11 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 import { ThemeProvider } from "./provider";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "koushik's Portfolio",
-  description: "desc Portfolio",
+  description: "Software developer",
 };
 
 export default function RootLayout({
@@ -19,7 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="logo.png" sizes="any" />
+        <link
+          rel="icon"
+          href="/assets/icons/koushik-logo-rounded.png"
+          sizes="any"
+        />
       </head>
       <body className={inter.className}>
         <ThemeProvider

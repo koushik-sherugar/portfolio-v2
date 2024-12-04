@@ -4,7 +4,11 @@ export const navItems = [
   { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
-
+import personm1 from "../public/assets/personm1.png";
+import personm2 from "../public/assets/personm2.png";
+import personm3 from "../public/assets/personm3.png";
+import personf1 from "../public/assets/personf1.png";
+import personf2 from "../public/assets/personf2.png";
 export const gridItems = [
   {
     id: 1,
@@ -103,37 +107,41 @@ export const projects = [
     link: "/ui.apple.com",
   },
 ];
-
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "I entrusted Koushik with the development of a critical application, and he delivered beyond expectations. Unlike many freelancers, he brings a strong sense of responsibility and ownership to his work, making him a reliable partner for any project.",
+    name: "Bhavana Reddy",
+    title: "Founder & CEO at weheal pvt ltd",
+    profileImg: personf2,
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Working with Koushik was an absolute pleasure. He not only deliveres high-quality work on time but also ensured the solution was scalable and maintainable. His professionalism and commitment make him a standout developer. I highly recommend him to anyone building complex projects from scratch.",
+    name: "Hrithik Tiwari",
+    title: "Tech Lead at Swift Media Labs",
+    profileImg: personm1,
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Koushik was an invaluable teammate during a recent hackathon. His ability to quickly grasp new technologies and collaborate effectively made a significant impact on our project. He is an exceptional team player and a great problem solver.",
+    name: "Radhika choudary",
+    title: "Tech Lead Engineer at Techwherz",
+    profileImg: personf1,
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "I’ve had the privilege of observing Koushik since the early stages of his career. He is incredibly diligent and takes full ownership of his work, consistently exceeding expectations. His dedication and attention to detail are remarkable.",
+    name: "Rajesh Kumar",
+    title: "Senior Developer at alphacraft Technologies",
+    profileImg: personm3,
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Koushik consistently goes above and beyond to ensure project success. His technical expertise, combined with his commitment to quality and timely delivery, makes him a go-to professional for challenging tasks.",
+    name: "Divyanshu Singh",
+    title: "Product Manager at Innovatech Solutions",
+    profileImg: personm2,
   },
 ];
 
@@ -205,13 +213,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/koushik-sherugar",
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/link.svg",
+    link: "https://linkedin.com/in/koushik-sherugar/",
   },
   {
     id: 3,
-    img: "/link.svg",
+    img: "/instagram.svg",
+    link: "https://www.instagram.com/kaushik_sherugar_007/",
   },
 ];

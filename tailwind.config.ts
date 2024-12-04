@@ -30,6 +30,7 @@ const config = {
         bgPrimary: "#111827",
         bgSecondary: "#1F2937",
         textPrimary: "#F9FAFB",
+        textAccentYellow: "#FFF031",
         black: {
           DEFAULT: "#000",
           100: "#000319",

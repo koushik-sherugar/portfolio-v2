@@ -7,26 +7,41 @@ const About = () => {
       <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-start lg:gap-12">
         <div className="md:7/12 lg:w-6/12">
           <h2 className="text-2xl font-bold md:text-4xl">
-            Hi, I'm Koushik Sherugar
+            Hi, I'm Koushik Sherugar 👋
           </h2>
 
-          <p className="mt-6 ">
-            A full-stack developer with a passion for building software that is
-            scalable, maintainable, and user-friendly. I have experience in
-            building web applications using modern technologies like React,
-            Next.js, Node.js, and Express.js. I am also proficient in mobile app
-            development using Flutter and Android. I am a quick learner and a
-            team player who is always eager to learn new technologies and work
-            on challenging projects. I am looking for opportunities to work on
-            exciting projects and contribute to the success of the organization.
-          </p>
+          <div className="mt-6 ">
+            <p>
+              A passionate Full Stack Developer with a proven track record of
+              delivering high-quality web and mobile solutions.
+            </p>
+            <br />
+            <span className="font-semibold flex mt-2">
+              What I Bring to the Table:
+            </span>
+            <li>Experience working with startups and large enterprises.</li>
+            <li>
+              Expertise in tackling time-sensitive projects and solving complex
+              challenges.
+            </li>
+            <li>
+              Client-focused approach, ensuring seamless communication and
+              satisfaction.
+            </li>
+            <li>
+              A proactive mindset, consistently going above and beyond
+              expectations, even outside my job description.
+            </li>
+            <br />
+            Let’s create something impactful together! 💡
+          </div>
           {/* Acheievements */}
           <p className="mt-4 font-bold text-lg my-2">Acheievements</p>
           <section className="flex gap-4 ">
             {/* Projects done */}
             <div className="flex flex-col gap-2 ">
               <p className="text-xl">
-                50 <span className="text-sm text-cyan-400">+</span>
+                30 <span className="text-sm text-cyan-400">+</span>
               </p>
               <p>Projects done</p>
             </div>

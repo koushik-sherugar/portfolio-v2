@@ -9,6 +9,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
   title: string;
+  role: string;
   timeSpan: string;
   content: React.ReactNode;
 }
@@ -35,13 +36,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div className="w-full  font-sans md:px-10" ref={containerRef}>
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto py-10 px-2 md:px-7 lg:px-8">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
           Experience
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I have been working in the industry working for both startup and
-          enterprise companies. Here's my journey so far.
+          I had the opportunity to work with some amazing companies and teams.
+          Here's my journey so far.
         </p>
       </div>
 
@@ -55,14 +56,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
-              <div className="flex flex-col gap-2">
-                <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 ">
-                  {item?.title}
-                </h3>
-                <p className="hidden md:block text-neutral-500  text-md md:pl-20 ">
-                  ( {item?.timeSpan} )
-                </p>
-              </div>
+              <section className="flex flex-col gap-4 ">
+                <div className="hidden md:block text-xl md:pl-20 md:text-5xl  text-neutral-500 dark:text-neutral-500 ">
+                  <h3 className="font-bold">{item?.title}</h3>
+                  <h5 className="font-semibold text-sm">{item?.role}</h5>
+                  <p className="text-xs">( {item?.timeSpan} )</p>
+                </div>
+              </section>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
@@ -70,7 +70,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 <h3 className="md:hidden block text-2xl  text-left font-bold text-neutral-500 dark:text-neutral-500">
                   {item.title}
                 </h3>
-                <p className="md:hidden block text-md mb-2 text-left text-neutral-500">
+                <h5 className="md:hidden block text-md mb-2 text-left text-neutral-500">
+                  {item?.role}
+                </h5>
+                <p className="md:hidden block text-sm mb-2 text-left text-neutral-500">
                   {item?.timeSpan}
                 </p>
               </div>
