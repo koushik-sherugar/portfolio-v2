@@ -59,6 +59,7 @@ const Contact = () => {
   return (
     <>
       <div
+        id="contact"
         style={{ display: "block" }}
         className="no-scrollbar relative w-full  overflow-hidden overflow-y-hidden border border-neutral-300 bg-white"
       >

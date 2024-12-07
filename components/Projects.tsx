@@ -11,6 +11,14 @@ const Projects = () => {
 
 export default Projects;
 
+// dunzo clone:
+// Abhaya: //abhaya.vercel.app/
+// explovid
+
+// blogging buzz
+// NMS: https://nss-management-system.vercel.app/
+// flipkart clone : https://flipkart-clone-tan.vercel.app/
+
 export const products = [
   {
     title: "Moonbeam",

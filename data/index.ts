@@ -72,7 +72,6 @@ export const gridItems = [
     spareImg: "",
   },
 ];
-
 export const projects = [
   {
     id: 1,
