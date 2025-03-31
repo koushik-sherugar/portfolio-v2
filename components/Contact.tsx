@@ -50,8 +50,9 @@ const Contact = () => {
     }
   };
   console.log("mailSent", mailSent);
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && formData.name) {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    if (e.key === "Enter") {
+      // You can add any conditional logic if needed based on the element value.
       handleNext();
     }
   };
