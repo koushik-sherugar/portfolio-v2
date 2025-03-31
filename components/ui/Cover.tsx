@@ -66,7 +66,7 @@ export const Cover = ({
               }}
               className="w-[200%] h-full flex"
             >
-               <SparklesCore
+               {/* <SparklesCore
           background="transparent"
           minSize={0.6}
           maxSize={1.4}
@@ -81,7 +81,7 @@ export const Cover = ({
           particleDensity={500}
           className="w-full h-full"
           particleColor="#FFFFFF"
-        />
+        /> */}
               {/* <SparklesCore
                 background="transparent"
                 minSize={0.4}
