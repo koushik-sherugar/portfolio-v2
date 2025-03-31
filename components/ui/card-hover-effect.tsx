@@ -12,6 +12,7 @@ export const HoverEffect = ({
     title: string;
     // description: string;
     link: string;
+    imgSrc: string;
   }[];
   className?: string;
 }) => {
@@ -52,7 +53,7 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <Image
-              src="https://assets.aceternity.com/templates/startup-1.webp"
+              src= {item?.imgSrc}
               alt="startup template"
               width={500}
               height={500}

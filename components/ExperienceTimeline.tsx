@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Timeline } from "./ui/Timeline";
 import { HoverEffect } from "./ui/card-hover-effect";
-
+import {codezyngLandingPage, codezyngZupaloop, tavantRealtorLogo, tavantUpnestLogo} from "@/public/assets/ExperienceImages/index"
 const ExperienceTimeline = () => {
   const [data, setData] = useState([]);
 
@@ -12,28 +12,30 @@ const ExperienceTimeline = () => {
   const HoverEffectImages = {
     tavant: [
       {
-        imgSrc: "",
-        link: "https://assets.aceternity.com/templates/startup-1.webp",
-        title: "startup template",
+        imgSrc: tavantRealtorLogo,
+        link: "https://www.realtor.com/",
+        title: "realtor logo",
       },
       {
-        imgSrc: "",
-        link: "https://assets.aceternity.com/templates/startup-1.webp",
-        title: "startup template",
+        imgSrc: tavantUpnestLogo,
+        link: "https://upnest.com/re/",
+        title: "upnest logo",
       },
-      {
-        imgSrc: "",
-        link: "https://assets.aceternity.com/templates/startup-2.webp",
-        title: "startup template",
-      },
-      {
-        imgSrc: "",
-        link: "https://assets.aceternity.com/templates/startup-3.webp",
-        title: "startup template",
-      },
+     
     ],
     trikl: [],
-    codezyng: [],
+    codezyng: [
+      {
+        imgSrc: codezyngLandingPage,
+        link: "https://www.codezyng.com/",
+        title: "codezyng landing page",
+      },
+      {
+        imgSrc: codezyngZupaloop,
+        link: "https://zupaloop.com/",
+        title: "zupaloop landing page",
+      }
+    ],
     Freelancing: [],
   };
 
@@ -41,15 +43,16 @@ const ExperienceTimeline = () => {
     {
       companyName: "Tavant",
       role: "Senior Software Engineer",
-      timeSpan: "2018 - 2020",
+      timeSpan: "2024 - Present",
       shortDescription:
         "Designed and developed scalable web applications for enterprise clients, efficiently handling millions of users.",
       longDescription: [
         {
-          projectTitle: "Realtor.com (Mexico’s #1 Real Estate Platform):",
+          projectTitle: "Realtor.com (100 million+ monthly users):",
           description: [
-            "Mexico's number 1 real estate company",
-            "Led the migration of Upnest.com, acquired by Realtor.com, to a modern technology stack, ensuring seamless integration and enhanced functionality.",
+            "USA based real estate company with #2 position in the market",
+            "Led the migration of Upnest.com, acquired by Realtor.com, to a microservice architecture based modern technology stack, ensuring seamless integration and enhanced functionality.",
+            "Built APIs which are currently handling 5 million+ requests per day.",
             "Built a highly scalable search engine for real estate listings, improving user experience and performance.",
           ],
         },
@@ -94,14 +97,15 @@ const ExperienceTimeline = () => {
     {
       companyName: "CodeZyng",
       role: "Full Stack Developer",
-      timeSpan: "2023 - Present",
+      timeSpan: "2022 - 2023",
       shortDescription:
-        "Developed a complete e-commerce application for a client using the Shopify API as the backend, resulting in a 30% increase in sales.",
+        "Joined as a full stack developer and worked on multiple projects.",
       longDescription: [
         {
-          projectTitle: "E-commerce App & IOS screen recorder App",
+          projectTitle: "E-commerce & IOS screen recorder App",
           description: [
-            "Engineered a smart AI-powered screen recorder for iOS with seamless iCloud integration, enabling object-based search across videos and optimizing search speeds to be 10x faster than conventional methods.",
+            "Solely built an e-commerce app for a client using React Native and Shopify API, significantly enhancing their sales.",
+            "Engineered a smart AI screen recorder for iOS with iCloud storage, enabling object-based search across videos and optimizing search speed 10 times faster.",
             "Technologies Used: React Native, Redux, Tailwind CSS, GCP, BigQuery, Algolia Search Engine, Nest.js, PostgreSQL, Shopify",
           ],
         },
@@ -127,10 +131,10 @@ const ExperienceTimeline = () => {
                   <div className="flex gap-2 mb-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
                     ✅ {project.projectTitle}
                   </div>
-                  <ul className="list-disc pl-4">
+                  <ul className="list-disc pl-4 mb-3">
                     {project.description.map((point: any) => {
                       return (
-                        <li className="text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+                        <li className="pb-1 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
                           {point}
                         </li>
                       );
