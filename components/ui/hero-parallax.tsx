@@ -112,7 +112,7 @@ export const Header = () => {
         The Projects which <br /> I built
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        I'm a passionate developer who has worked on various projects. Here are
+        I&apos;m a passionate developer who has worked on various projects. Here are
         a glimpse of some of the projects I have worked on.
       </p>
     </div>

@@ -151,7 +151,7 @@ const Contact = () => {
               )}
               {step === 4 && (
                 <>
-                  <p>Beautiful! Here's what we've got:</p>
+                  <p>Beautiful! Here&apos;s what we&apos;ve got:</p>
                   <p>
                     <span className="text-blue-300 mt-2">Name:</span>{" "}
                     {formData.name}

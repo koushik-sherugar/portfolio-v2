@@ -102,7 +102,7 @@ const Landing = () => {
             <div className="bg-green-500 rounded-full size-2.5 relative ">
               <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
             </div>
-            <div className="text-sm font-semibold">Let's build together</div>
+            <div className="text-sm font-semibold">Let&apos;s build together</div>
           </div>
         </div>
         {/* texts */}

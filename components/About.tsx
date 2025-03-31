@@ -7,7 +7,7 @@ const About = () => {
       <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-start lg:gap-12">
         <div className="md:7/12 lg:w-6/12">
           <h2 className="text-2xl font-bold md:text-4xl">
-            Hi, I'm Koushik Sherugar 👋
+            Hi, I&apos;m Koushik Sherugar 👋
           </h2>
 
           <div className="mt-6 ">
