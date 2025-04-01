@@ -4,11 +4,11 @@ export const navItems = [
   { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
-import personm1 from "../public/assets/personm1.png";
-import personm2 from "../public/assets/personm2.png";
-import personm3 from "../public/assets/personm3.png";
-import personf1 from "../public/assets/personf1.png";
-import personf2 from "../public/assets/personf2.png";
+import personm1 from "../public/assets/images/testimonials/personm1.png";
+import personm2 from "../public/assets/images/testimonials/personm2.png";
+import personm3 from "../public/assets/images/testimonials/personm3.png";
+import personf1 from "../public/assets/images/testimonials/personf1.png";
+import personf2 from "../public/assets/images/testimonials/personf2.png";
 export const gridItems = [
   {
     id: 1,
