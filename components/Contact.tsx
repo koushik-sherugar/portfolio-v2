@@ -37,7 +37,26 @@ const Contact = () => {
   const handleSend = async () => {
     try {
       console.log("Sending form data", formData);
-      // handleClear();
+
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      // if (!response.ok) {
+      //   console.error("Error sending email", await response.json());
+      //   setMailSent(false);
+      //   return;
+      // }
+
+      console.log("Email sent successfully");
+      if (response.status !== 200) {
+        console.error("Error sending email", await response.json());
+        setMailSent(false);
+        return;
+      }
       setMailSent(true);
 
       setTimeout(() => {
@@ -49,7 +68,7 @@ const Contact = () => {
       setMailSent(false);
     }
   };
-  console.log("mailSent", mailSent);
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     if (e.key === "Enter") {
       // You can add any conditional logic if needed based on the element value.

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Timeline } from "./ui/Timeline";
 import { HoverEffect } from "./ui/card-hover-effect";
-import {codezyngLandingPage, codezyngZupaloop, tavantRealtorLogo, tavantUpnestLogo} from "@/public/assets/ExperienceImages/index"
+import { codezyngLandingPage, codezyngZupaloop, tavantRealtorLogo, tavantUpnestLogo, trikl1, trikl2, trikl3, trikl4 } from "@/public/assets/ExperienceImages/index"
 const ExperienceTimeline = () => {
   const [data, setData] = useState([]);
 
@@ -21,9 +21,30 @@ const ExperienceTimeline = () => {
         link: "https://upnest.com/re/",
         title: "upnest logo",
       },
-     
+
     ],
-    trikl: [],
+    trikl: [
+      {
+        imgSrc: trikl1,
+        link: "https://trikl.com/",
+        title: "trikl img",
+      },
+      {
+        imgSrc: trikl4,
+        link: "https://trikl.com/",
+        title: "trikl img",
+      },
+      {
+        imgSrc: trikl3,
+        link: "https://trikl.com/",
+        title: "trikl img",
+      },
+      {
+        imgSrc: trikl2,
+        link: "https://trikl.com/",
+        title: "trikl img",
+      }
+    ],
     codezyng: [
       {
         imgSrc: codezyngLandingPage,
@@ -115,7 +136,7 @@ const ExperienceTimeline = () => {
   ];
 
   function experienceDetailsMapping(ExperienceData: any) {
-    return ExperienceData.map((experience: any,) => {
+    return ExperienceData.map((experience: any) => {
       return {
         title: experience.companyName,
         role: experience.role,
@@ -125,32 +146,29 @@ const ExperienceTimeline = () => {
             <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
               {experience.shortDescription}
             </p>
-            {experience.longDescription.map((project: any, projectIndex: number) => {
-              return (
-                <div key={`project-${projectIndex}`}>
-                  <div className="flex gap-2 mb-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-                    ✅ {project.projectTitle}
-                  </div>
-                  <ul className="list-disc pl-4 mb-3">
-                    {project.description.map((point: any, pointIndex: number) => {
-                      return (
-                        <li key={`point-${pointIndex}`} className="pb-1 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-                          {point}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                  {/* Images display */}
-                  <HoverEffect
-                    items={experience.images.map((image: any) => ({
-                      title: image.title,
-                      link: image.link,
-                      imgSrc: image.imgSrc,
-                    }))}
-                  />
+            {experience.longDescription.map((project: any, projectIndex: number) => (
+              <div key={`project-${projectIndex}`}>
+                <div className="flex gap-2 mb-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+                  ✅ {project.projectTitle}
                 </div>
-              );
-            })}
+                <ul className="list-disc pl-4 mb-3">
+                  {project.description.map((point: any, pointIndex: number) => (
+                    <li key={`point-${pointIndex}`} className="pb-1 text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+            {experience.images && experience.images.length > 0 && (
+              <HoverEffect
+                items={experience.images.map((image: any) => ({
+                  title: image.title,
+                  link: image.link,
+                  imgSrc: image.imgSrc,
+                }))}
+              />
+            )}
           </div>
         ),
       };

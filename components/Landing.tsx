@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import profileImg from "../public/assets/images/memoji-avatar-1.png";
 import grainImage from "../public/assets/images/grain.jpg";
 import StarIcon from "../public/assets/icons/star.svg";
@@ -10,13 +10,6 @@ import { AnimatedModal } from "./AnimatedModal";
 import Link from "next/link";
 
 const Landing = () => {
-  const nextSectionRef = useRef<HTMLDivElement>(null);
-
-  function scrollToNextSection() {
-    if (nextSectionRef.current) {
-      nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }
 
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip ">
@@ -115,15 +108,16 @@ const Landing = () => {
             awesome applications for both startups and enterprises.
           </p>
           {/* buttons */}
-          <div className="flex flex-col md:flex-row justify-center items-center mt-6 gap-4">
-            <button className="cursor-pointer inline-flex items-center gap-2 border-2 border-white/15 px-6 h-12 rounded-xl">
-              <Link href="#about" className="font-semibold">
+          <div className="flex flex-col md:flex-row justify-center items-center mt-6 gap-4 ">
+            <Link href="#about"
+              className="cursor-pointer z-50 inline-flex items-center gap-2 border-2 border-white/15 px-6 h-12 rounded-xl">
+              <p className="font-semibold">
                 Scroll Down
-              </Link>
+              </p>
               <span>
                 <IoMdArrowDown />
               </span>
-            </button>
+            </Link>
             <AnimatedModal />
           </div>
         </div>

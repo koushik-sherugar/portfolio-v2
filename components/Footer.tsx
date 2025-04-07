@@ -8,9 +8,9 @@ const Footer = () => {
   // get current year
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
+    <footer className="w-full  pt-20 pb-10" id="contact">
       {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
+      <div className="w-full absolute left-0 -bottom-72 min-h-60">
         <img
           src="/footer-grid.svg"
           alt="grid"
@@ -20,7 +20,7 @@ const Footer = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Let&apos;s build something <span className="text-purple">impactful</span>{" "}
+          Let&apos;s build something <span className="text-yellow-500">impactful</span>{" "}
           together.
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">

@@ -84,7 +84,7 @@ export const InfiniteMovingCards = ({
         ref={scrollerRef}
         className={cn(
           // change gap-16
-          " flex min-w-full shrink-0 gap-16 py-4 w-max flex-nowrap",
+          " flex min-w-full shrink-0 gap-16 md:py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
@@ -110,9 +110,9 @@ export const InfiniteMovingCards = ({
               <span className=" relative z-20 text-sm md:text-lg leading-[1.6] text-white font-normal">
                 {item.quote}
               </span>
-              <div className="absolute bottom-2 z-20 mt-6 flex flex-row items-center">
+              <div className="relative md:absolute md:bottom-2 z-20 md:mt-6 mt-2 flex flex-row items-center">
                 {/* add this div for the profile img */}
-                <div className="me-3 rounded-full">
+                <div className="m-3 rounded-full">
                   <Image
                     className="aspect-square object-cover rounded-full shadow-md"
                     src={item.profileImg}

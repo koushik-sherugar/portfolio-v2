@@ -12,25 +12,22 @@ const About = () => {
 
           <div className="mt-6 ">
             <p>
-              A passionate Full Stack Developer with a proven track record of
-              delivering high-quality web and mobile solutions.
+              ✅ HIGH skilled, 🚀HIGH speed, and 🌟HIGH motivated Web/Mobile Developer with a proven track record of
+              delivering high-quality products.
             </p>
             <br />
             <span className="font-semibold flex mt-2">
               What I Bring to the Table:
             </span>
-            <li>Experience working with startups and large enterprises.</li>
+            <li>Experience working closely with both startups and large enterprises.</li>
             <li>
-              Expertise in tackling time-sensitive projects and solving complex
-              challenges.
+              Ability to deliver results on time-sensitive and high-stakes projects.
             </li>
             <li>
-              Client-focused approach, ensuring seamless communication and
-              satisfaction.
+              Experience of building applications used by millions of users every day.
             </li>
             <li>
-              A proactive mindset, consistently going above and beyond
-              expectations, even outside my job description.
+              A proactive and flexible mindset—always ready to go beyond expectations and take on challenges beyond my role.
             </li>
             <br />
             Let’s create something impactful together! 💡

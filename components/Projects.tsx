@@ -1,5 +1,6 @@
 import React from "react";
 import { HeroParallax } from "./ui/hero-parallax";
+import { abhaya, dunzoClone, nms, quickerkart } from "../public/assets/images/projectImages/index";
 
 const Projects = () => {
   return (
@@ -14,103 +15,67 @@ export default Projects;
 // dunzo clone:
 // Abhaya: //abhaya.vercel.app/
 // explovid
-
 // blogging buzz
 // NMS: https://nss-management-system.vercel.app/
 // flipkart clone : https://flipkart-clone-tan.vercel.app/
+// https://github.com/koushik-sherugar/listen-and-forget
+// https://listen-and-forget.vercel.app/
 
 export const products = [
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+    title: "Abhaya",
+    discription: "A women safety application with SOS and nearby location businesses & helpline automatic help asking features.",
+    appLink: "https://abhaya.vercel.app/",
+    githubLink: "https://abhaya1",
+    thumbnail: abhaya
   },
   {
-    title: "Cursor",
-    link: "https://cursor.so",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+    title: "Quickerkart",
+    discription: "QR based self ordering system for restaurants.",
+    appLink: "https://amogha-sagar.vercel.app/",
+    githubLink: "https://github.com/koushik-sherugar/",
+    thumbnail: quickerkart
   },
   {
-    title: "Rogue",
-    link: "https://userogue.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
-  },
-
-  {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+    title: "dunzo clone",
+    discription: "A clone of dunzo with all the features like ordering and tracking the order.",
+    appLink: "https://github.com/koushik-sherugar/delivery-app",
+    githubLink: "https://github.com/koushik-sherugar/delivery-app",
+    thumbnail: dunzoClone,
   },
   {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+    title: "NSS Management System",
+    discription: "A management system for NSS volunteers and admins to manage their activities and events.",
+    appLink: "https://github.com/koushik-sherugar/NSS-Management-System",
+    githubLink: "https://github.com/koushik-sherugar/NSS-Management-System",
+    thumbnail: nms,
   },
   {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
-  },
-
-  {
-    title: "Algochurn",
-    link: "https://algochurn.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+    title: "Abhaya",
+    discription: "A women safety application with SOS and nearby location businesses & helpline automatic help asking features.",
+    appLink: "https://abhaya.vercel.app/",
+    githubLink: "https://abhaya1",
+    thumbnail: abhaya
   },
   {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+    title: "Quickerkart",
+    discription: "QR based self ordering system for restaurants.",
+    appLink: "https://amogha-sagar.vercel.app/",
+    githubLink: "https://github.com/koushik-sherugar/",
+    thumbnail: quickerkart
   },
   {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+    title: "dunzo clone",
+    discription: "A clone of dunzo with all the features like ordering and tracking the order.",
+    appLink: "https://github.com/koushik-sherugar/delivery-app",
+    githubLink: "https://github.com/koushik-sherugar/delivery-app",
+    thumbnail: dunzoClone,
   },
   {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
-  },
-  {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-  },
-
-  {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
-  },
-  {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
-  },
-  {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
-  },
-  {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
-  },
+    title: "NSS Management System",
+    discription: "A management system for NSS volunteers and admins to manage their activities and events.",
+    appLink: "https://github.com/koushik-sherugar/NSS-Management-System",
+    githubLink: "https://github.com/koushik-sherugar/NSS-Management-System",
+    thumbnail: nms,
+  }
 ];

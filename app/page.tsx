@@ -16,31 +16,31 @@ import ExperienceTimeline from "@/components/ExperienceTimeline";
 import CtaCard from "@/components/ui/CtaCard";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-import dynamic from "next/dynamic";
 
-import {Suspense} from "react";
+import { Suspense } from "react";
 
 const Home = () => {
+
   return (
     <Suspense fallback={<>Loading...</>}>
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-3">
-      <div className="max-w-7xl w-full">
-        <FloatingNav navItems={navItems} />
-        <Landing />
-        <About />
-        <ExperienceTimeline />
-        <Projects />
-        {/* <CtaCard /> */}
-        {/* <Hero /> */}
-        {/* <Grid />
+      <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-3">
+        <div className="max-w-7xl w-full">
+          <FloatingNav navItems={navItems} />
+          <Landing />
+          <About />
+          <ExperienceTimeline />
+          <Projects />
+          {/* <CtaCard /> */}
+          {/* <Hero /> */}
+          {/* <Grid />
         <RecentProjects /> */}
-        <Clients />
-        <Contact />
-        {/* <Experience /> */}
-        {/* <Approach /> */}
-        <Footer />
-      </div>
-    </main> </Suspense>
+          <Clients />
+          <Contact />
+          {/* <Experience /> */}
+          {/* <Approach /> */}
+          <Footer />
+        </div>
+      </main> </Suspense>
   );
 };
 
