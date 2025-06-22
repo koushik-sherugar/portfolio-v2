@@ -65,7 +65,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </section>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
+            <div className="relative sm:pl-20 pr-4 md:pl-4 w-full">
               <div className="flex flex-col gap-1">
                 <h3 className="md:hidden block text-2xl  text-left font-bold text-neutral-500 dark:text-neutral-500">
                   {item.title}
@@ -91,7 +91,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             style={{
               height: heightTransform,
               opacity: opacityTransform,
-            }}
+            } as any}
             className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
