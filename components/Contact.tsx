@@ -1,5 +1,7 @@
+// "use client";
+import dynamic from "next/dynamic";
 import React, { useState } from "react";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json";
 
 const Contact = () => {
@@ -10,6 +12,8 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
   const defaultOptions = {
     loop: mailSent,
