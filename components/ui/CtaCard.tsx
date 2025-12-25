@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import Lottie from "react-lottie";
 import MagicButton from "../MagicButton";
@@ -59,9 +60,8 @@ const CtaCard = () => {
         <div className="flex flex-col gap-3 ">
           <p>contact us</p>
           <div
-            className={`absolute -bottom-5 right-0 left-0 z-50 flex justify-center items-center ${
-              copied ? "block" : "block"
-            }`}
+            className={`absolute -bottom-5 right-0 left-0 z-50 flex justify-center items-center ${copied ? "block" : "block"
+              }`}
           >
             {/* <img src="/confetti.gif" alt="confetti" /> */}
             <Lottie options={defaultOptions} height={200} width={400} />

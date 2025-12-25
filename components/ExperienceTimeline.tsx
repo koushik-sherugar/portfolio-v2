@@ -72,7 +72,7 @@ const ExperienceTimeline = () => {
           projectTitle: "Realtor.com (100 million+ monthly users):",
           description: [
             "USA based real estate company with #2 position in the market",
-            "Led the migration of Upnest.com, acquired by Realtor.com, to a microservice architecture based modern technology stack, ensuring seamless integration and enhanced functionality.",
+            "Worked on microservice architecture based modern technology stack, ensuring seamless integration and enhanced functionality.",
             "Built APIs which are currently handling 5 million+ requests per day.",
             "Built a highly scalable search engine for real estate listings, improving user experience and performance.",
           ],
