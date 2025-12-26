@@ -13,7 +13,7 @@ const Contact = () => {
     message: "",
   });
 
-// const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
   const defaultOptions = {
     loop: mailSent,
