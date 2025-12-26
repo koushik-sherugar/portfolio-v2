@@ -1,5 +1,5 @@
-// "use client";
-// import dynamic from "next/dynamic";
+"use client";
+import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json";
