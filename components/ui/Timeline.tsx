@@ -5,7 +5,7 @@ import {
   useTransform,
   motion,
 } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
   title: string;
@@ -19,16 +19,35 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
 
-  useEffect(() => {
-    if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
+  useLayoutEffect(() => {
+    if (!ref.current) return;
+
+    const measure = () => {
+      const rect = ref.current!.getBoundingClientRect();
       setHeight(rect.height);
-    }
+    };
+
+    // Initial measure
+    measure();
+
+    // Update on resize / content changes
+    const ro = new ResizeObserver(() => measure());
+    ro.observe(ref.current);
+
+    window.addEventListener("load", measure);
+
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("load", measure);
+    };
   }, [ref]);
 
   const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 10%", "end 50%"],
+    // use the timeline container as the scroll target so progress maps correctly
+    target: ref,
+    // start when the top of the element hits the bottom of the viewport,
+    // finish when the bottom of the element reaches the top of the viewport
+    offset: ["start end", "end start"],
   });
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);

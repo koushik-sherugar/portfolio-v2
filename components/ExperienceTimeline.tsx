@@ -32,17 +32,17 @@ const ExperienceTimeline = () => {
       {
         imgSrc: trikl4,
         link: "https://trikl.com/",
-        title: "trikl img",
+        title: "trikl img2",
       },
       {
         imgSrc: trikl3,
         link: "https://trikl.com/",
-        title: "trikl img",
+        title: "trikl img3",
       },
       {
         imgSrc: trikl2,
         link: "https://trikl.com/",
-        title: "trikl img",
+        title: "trikl img4",
       }
     ],
     codezyng: [
@@ -83,7 +83,7 @@ const ExperienceTimeline = () => {
     {
       companyName: "TRIKL",
       role: "Software Engineer",
-      timeSpan: "2020 - 2023",
+      timeSpan: "2023 - 2024",
       shortDescription:
         "Joined as the first founding engineer and lead developer. I handled the development of the entire platform, from the ground up.",
       longDescription: [

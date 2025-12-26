@@ -96,7 +96,7 @@ export const ModalBody = ({
             opacity: 0,
             backdropFilter: "blur(0px)",
           }}
-          className="fixed  [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full  flex items-center justify-center "
+          className="fixed z-[999] [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full flex items-center justify-center"
         >
           <Overlay />
 

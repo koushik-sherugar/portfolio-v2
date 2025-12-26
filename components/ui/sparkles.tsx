@@ -141,7 +141,7 @@ export const SparklesCore = (props: SparklesProps) => {
       }
 
       // Update and draw particles
-      particlesRef.current.forEach((particle) => {
+      particlesRef?.current?.forEach((particle) => {
         particle.update(canvas)
         particle.draw(ctx)
       })
